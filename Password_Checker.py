@@ -14,7 +14,7 @@ def check(password):
     length = len(password)  #checking the length
     majuscule = sum(1 for char in password if 'A' <= char <= 'Z')  #checking the uppercase characters
     minuscule = sum(1 for char in password if 'a' <= char <= 'z')  #checking the lowercase characters
-    special_characters = sum(1 for char in password if char in '!@#$%^&*_=+[]{}|;:,.<>?/')  #checking the special characters
+    special_characters = sum(1 for char in password if char in '!@#$%^&*_=+[]\{\}|;:,.<>?/')  #checking the special characters
     numbers = sum(1 for char in password if '0' <= char <= '9')   #checking the numbers
 
     return length, special_characters, numbers, majuscule, minuscule
@@ -86,7 +86,7 @@ def builder():
 
 # Main algorithm
 print("Welcome! This algorithm is a password complexity checker. To make sure that your password will satisfy our criteria, please follow the instructions below: \n")
-print("Your password must contain at least:\n- 8 characters as mentionned bellow:\n   *3 special characters (!@#$%^&*_+=-:;)\n   *3 numbers\n   *3 uppercase letters\n   *3 lowercase letters.\n")
+print("Your password must contain at least:\n- 12 characters as mentionned bellow:\n   *3 special characters (!@#$%^&*_+=-:;)\n   *3 numbers\n   *3 uppercase letters\n   *3 lowercase letters.\n")
 choice = input('If you understand, please type "ok" to continue, if not, type "no" to display an example, or type "build" to help you build your own secure password: ')
 
 # Correct input validation
